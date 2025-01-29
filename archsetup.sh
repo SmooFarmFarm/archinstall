@@ -14,8 +14,9 @@ sudo pacman -S --noconfirm reflector
 # Backup existing mirrorlist
 sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 
-# Set the 10 fastest mirrors
-sudo reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+# Set the 10 fastest mirrors CANADA
+sudo reflector --latest 10 --protocol https --sort rate --country Canada --save /etc/pacman.d/mirrorlist
+
 
 # Refresh package database
 sudo pacman -Syy
