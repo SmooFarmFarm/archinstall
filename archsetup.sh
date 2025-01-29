@@ -2,6 +2,10 @@ f#!/bin/bash
 set -e  # Exit on error
 
 #####################
+echo "Allow sudo for 15 mins"
+sudo -v
+
+#####################
 
 # Update system clock
 sudo timedatectl set-ntp true
