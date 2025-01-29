@@ -70,7 +70,7 @@ flatpak install com.spotify.Client org.standardnotes.standardnotes org.audacityt
 ##################
 
 # AUR programs
-yay -S --noconfirm veracrypt mullvad-vpn
+yay -S --noconfirm veracrypt mullvad-vpn-bin
 
 
 #################
