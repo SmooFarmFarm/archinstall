@@ -1,4 +1,4 @@
-#!/bin/bash
+f#!/bin/bash
 set -e  # Exit on error
 
 echo "Updating system..."
@@ -28,7 +28,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak install com.spotify.Client org.standardnotes.standardnotes org.audacityteam.Audacity org.mozilla.firefox org.chromium.Chromium com.bitwarden.desktop com.calibre_ebook.calibre com.discordapp.Discord io.mpv.Mpv org.videolan.VLC org.qbittorrent.qBittorrent org.kde.kdenlive org.libreoffice.LibreOffice org.kde.krita org.signal.Signal            
 
 # AUR programs
-yay -S --noconfirm veracrypt mullvad
+yay -S --noconfirm veracrypt mullvad-vpn
 
 # Set up 'll' alias like Ubuntu
 echo 'alias ll="ls -lah --color=auto"' | tee -a /etc/skel/.bashrc /root/.bashrc /home/$USER/.bashrc
