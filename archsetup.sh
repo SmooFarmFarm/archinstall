@@ -43,7 +43,15 @@ sudo pacman -Syu --noconfirm
 
 # Installing core packages
 echo "Installing essential packages..."
-sudo pacman -S --needed --noconfirm git nano base-devel flatpak gparted htop inxi obs-studio syncthing
+sudo pacman -S --needed --noconfirm git nano base-devel flatpak gparted htop inxi obs-studio syncthing linux-headers dnsutils wget curl openssh ntfs-3g exfat-utils f2fs-tools btrfs-progs dosfstools zip unzip p7zip unrar lzop lrzip htop btop nvtop lm_sensors lsof bash-completion neofetch exa bat fd ripgrep fzf xdg-utils gvfs file-roller   
+ 
+
+##################
+
+# Enable syncthing and enable it even without logging in
+systemctl --user enable --now syncthing
+loginctl enable-linger $USER
+
 
 ####################
 
@@ -80,3 +88,11 @@ echo 'alias ll="ls -lah --color=auto"' | sudo tee -a /etc/skel/.bashrc /root/.ba
 
 # Reload bash config
 source /home/$USER/.bashrc
+
+
+# Replace ls with exa
+# alias ls='exa -al --color=always --group-directories-first --icons'     # preferred listing
+# alias la='exa -a --color=always --group-directories-first --icons'      # all files and dirs
+# alias ll='exa -l --color=always --group-directories-first --icons'      # long format
+# alias lt='exa -aT --color=always --group-directories-first --icons'     # tree listing
+# alias l.='exa -ald --color=always --group-directories-first --icons .*' # show only dotfiles
