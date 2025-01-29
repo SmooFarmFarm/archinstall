@@ -31,7 +31,7 @@ flatpak install com.spotify.Client org.standardnotes.standardnotes org.audacityt
 yay -S --noconfirm veracrypt mullvad-vpn
 
 # Set up 'll' alias like Ubuntu
-echo 'alias ll="ls -lah --color=auto"' | tee -a /etc/skel/.bashrc /root/.bashrc /home/$USER/.bashrc
+echo 'alias ll="ls -lah --color=auto"' | sudo tee -a /etc/skel/.bashrc /root/.bashrc /home/$USER/.bashrc
 
 
 # Reload bash config
