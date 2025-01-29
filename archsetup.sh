@@ -21,4 +21,4 @@ fi
 echo "Enabling Flathub..."
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-echo "Setup complete!"
+flatpak install com.spotify.Client org.standardnotes.standardnotes
